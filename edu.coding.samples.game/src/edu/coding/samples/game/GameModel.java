@@ -7,7 +7,7 @@ public class GameModel {
 
 	GameModel(Game game) {
 		m_game = game;
-		map = new Board(10);
+		map = new Board((int) 20);
 
 	}
 	

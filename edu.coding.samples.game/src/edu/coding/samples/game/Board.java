@@ -5,31 +5,35 @@ import java.awt.Graphics;
 
 public class Board {
 	Color m_color;
-	int taille_map = 720;
+	Screen_size s = new Screen_size();
+	int taille_map = s.height - 40; // Pourquoi 40 ? Mistere et boule de gomme 
 	int nb_cellule;
 	int taille_cellule;
+	//cellule map[][];
+	int offset = (s.width - taille_map)/2;
 	
 	
 	public Board(int nb_cel)
 	{	
 		nb_cellule = nb_cel;
-		taille_cellule = 720/(nb_cellule);
-		System.out.println("taille cellule" + taille_cellule);
+		taille_cellule = taille_map/(nb_cellule);
+		System.out.println("taille cellule : " + taille_cellule);
+		System.out.println("taille map:" + taille_map);
+		
 	}
 	
 	
 	void paint(Graphics g)
 	{	
+		int  x,y;
 		g.setColor(new Color(255, 255, 255));
-		for(int x = 280; x < 280 + taille_map; x+=taille_cellule)
+		for(x = 0; x < nb_cellule; x++)
 		{
-			for(int  y = 0; y < taille_map; y+=taille_cellule)
+			for(y = 0; y < nb_cellule; y++)
 			{
-				g.drawRect(x, y, taille_cellule, taille_cellule);
+				System.out.println("x:" + x + " " + "y:" + y);
+				g.drawRect(offset + x*taille_cellule , y*taille_cellule, taille_cellule, taille_cellule);
 			}
 		}
-		g.drawRect(1000, 720, 2, 2);
-		g.drawRect(0, 0, 2, 2);
-		g.drawRect(1280, 720, 2, 2);
 	}
 }
