@@ -66,5 +66,6 @@ public class GameView extends JPanel {
 	}
 	*/
     m_model.map.paint(g);
+    m_model.j1.paint(g);
   }
 }

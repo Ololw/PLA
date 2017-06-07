@@ -14,6 +14,7 @@ public class WindowListener implements java.awt.event.WindowListener {
 
   @Override
   public void windowClosed(WindowEvent e) {
+	  System.exit(0);
   }
 
   @Override
