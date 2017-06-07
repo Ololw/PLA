@@ -88,6 +88,8 @@ public class Game {
   }
 
   private void createWindow() {
+	  
+	Screen_size s = new Screen_size();
     m_frame = new JFrame();
     m_frame.setLayout(new BorderLayout());
     m_frame.setTitle("Game");
@@ -99,7 +101,10 @@ public class Game {
 	m_text.setText("Starting up...");
 		m_frame.add(m_text, BorderLayout.NORTH);
 	*/
-	m_frame.setSize(1280, 720);
+	m_frame.setSize(s.width, s.height);
+	m_frame.setResizable(false);
+	System.out.println("width =" + s.width + " " + "height =" + s.height);
+	
     m_frame.doLayout();
     m_frame.setVisible(true);
 
