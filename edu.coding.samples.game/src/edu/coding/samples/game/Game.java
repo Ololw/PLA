@@ -102,6 +102,9 @@ public class Game {
 		m_frame.add(m_text, BorderLayout.NORTH);
 	*/
 	m_frame.setSize(s.width, s.height);
+	m_frame.setResizable(false);
+	System.out.println("width =" + s.width + " " + "height =" + s.height);
+	
     m_frame.doLayout();
     m_frame.setVisible(true);
 

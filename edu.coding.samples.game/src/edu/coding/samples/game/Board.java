@@ -31,7 +31,7 @@ public class Board {
 		{
 			for(y = 0; y < nb_cellule; y++)
 			{
-				System.out.println("x:" + x + " " + "y:" + y);
+				System.out.println("x:" + (offset + x*taille_cellule) + " " + "y:" + (y*taille_cellule));
 				g.drawRect(offset + x*taille_cellule , y*taille_cellule, taille_cellule, taille_cellule);
 			}
 		}
