@@ -4,9 +4,9 @@ public class Case_vide implements Cellule {
 	
 	boolean accessible;
 	
-	weapon w;
-	action a;
-	buff b;
+	//weapon w;
+	//action a;
+	//buff b;
 	
 	
 	
